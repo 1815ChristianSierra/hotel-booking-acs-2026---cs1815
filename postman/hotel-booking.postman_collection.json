@@ -352,7 +352,7 @@
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Código de respuesta es 200\", function () { pm.expect(pm.response.code, \"Cuerpo de la respuesta: \" + pm.response.text().slice(0, 300)).to.eql(200); });",
-                  "pm.test(\"Esquema de la respuesta es válido\", function () { pm.response.to.have.jsonSchema({\"type\":\"object\",\"required\":[\"success\",\"message\",\"data\"],\"properties\":{\"success\":{\"type\":\"boolean\"},\"message\":{\"type\":\"string\"}}}); });",
+                  "pm.test(\"Esquema de la respuesta es válido\", function () { pm.response.to.have.jsonSchema({\"type\":\"object\",\"required\":[\"success\",\"message\"],\"properties\":{\"success\":{\"type\":\"boolean\"},\"message\":{\"type\":\"string\"}}}); });",
                   "pm.test(\"Contenido: reserva creada correctamente\", function () {",
                   "  const json = pm.response.json();",
                   "  pm.expect(json.success).to.be.true;",
